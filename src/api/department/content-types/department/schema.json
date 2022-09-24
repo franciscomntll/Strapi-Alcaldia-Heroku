@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "departments",
+  "info": {
+    "singularName": "department",
+    "pluralName": "departments",
+    "displayName": "Direcciones",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "noticia": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "direcciones"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "isACategory": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gacetas",
+  "info": {
+    "singularName": "gaceta",
+    "pluralName": "gacetas",
+    "displayName": "gaceta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "nroGaceta": {
+      "type": "integer"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "datePublishGaceta": {
+      "type": "date"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
